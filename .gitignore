@@ -1,0 +1,10 @@
+composer.lock
+composer.phar
+vendor/
+node_modules/
+*-local*
+*.sql
+*.log
+.phalcon/
+.idea/
+node_modules/
