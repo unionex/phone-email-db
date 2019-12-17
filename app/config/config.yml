@@ -1,0 +1,60 @@
+logger:
+  dir: log
+  fileName: "log/%date%/%requestId%.log"
+  format: "[%type%] %message%"
+  enabled: true
+  logging:
+    - database
+    - exchange
+    - settings
+    - update
+    - auth
+database:
+  adapter: PostgreSQL
+  host: localhost
+  username: mobcards
+  password: 00000000
+  dbname: mobcards
+exchange:
+  host: hostname.com
+  secret: secret
+auth:
+  aclService: acl
+  dbService: db
+cache:
+  frontend:
+    adapter: data
+    lifetime: 172800
+  backend:
+    adapter: file
+    cacheDir: cache
+    prefix: phone-email-db
+modelsMeta:
+  cache:
+    adapter: files
+    config:
+      servers:
+      - cacheDir: cache
+        prefix: phone-email-db
+settings:
+  schema: settings
+  dbService: dbBasic
+update:
+  branch: master
+  repository: origin
+updateLog:
+  model: App\Modules\Logs\Models\Log
+  category: update
+sysLog:
+  model: App\Modules\Logs\Models\Log
+  category: system
+application:
+  version: 1.0.0
+  modelsDir: app/models
+  controllersDir: app/controllers
+  exceptionsDir: app/exceptions
+  responsesDir: app/responses
+  middlewareDir: app/middleware
+  helpersDir: app/helpers
+  modulesDir: app/modules
+  behaviorsDir: app/behaviors

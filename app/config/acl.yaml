@@ -1,0 +1,22 @@
+roles:
+ - name:  Admin
+   description:  Администратор
+permissions:
+  user:
+    auth:
+      roles:
+        - Ghost
+    view:
+      roles:
+        - Admin
+      rule: App\Modules\Acl\Rules\User\ViewRule
+    view-list:
+      roles:
+        - Admin
+    update:
+      roles:
+        - Admin
+      rule:  App\Modules\Acl\Rules\User\UpdateRule
+    create:
+      roles:
+        - Admin

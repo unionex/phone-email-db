@@ -1,0 +1,11 @@
+{
+    "name": "DBase Phone and Email",
+    "description": "",
+    "require-dev": {
+        "phalcon/devtools": "~3.2"
+    },
+    "require": {
+        "php": "7.2.10",
+        "codedungeon/php-cli-colors": "~1.0"
+    }
+}
